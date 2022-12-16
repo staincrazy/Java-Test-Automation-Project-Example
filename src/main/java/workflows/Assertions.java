@@ -12,8 +12,7 @@ public class Assertions {
     }
 
     public boolean assertPageTitleIs(String targetUrl) {
-        for (defaultTimeout = 1000; defaultTimeout > 0; defaultTimeout -= 1) {
-            System.out.println(defaultTimeout);
+        for (defaultTimeout = 10000; defaultTimeout > 0; defaultTimeout -= 1) {
             if (driver.getTitle().equals(targetUrl)) {
                 return true;
             }
