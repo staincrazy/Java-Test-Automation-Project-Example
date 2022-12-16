@@ -2,7 +2,6 @@ package selenide;
 
 import static com.codeborne.selenide.Selenide.*;
 
-
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -28,9 +27,7 @@ public class SimpleSelenide {
                 return;
             }
 
-
         }
-
 
     }
 }

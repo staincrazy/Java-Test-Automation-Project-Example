@@ -8,12 +8,12 @@ import resources.SingletonWebDriver;
 
 public class BaseTest {
 
-    public WebDriver driver = SingletonWebDriver.getInstance();
+    public WebDriver driver = SingletonWebDriver.getChromeDriverInstance();
 
     @BeforeClass
     public void initDriver(){
         if(driver==null){
-            driver = SingletonWebDriver.getInstance();
+            driver = SingletonWebDriver.getChromeDriverInstance();
         }
    }
 
