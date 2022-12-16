@@ -1,7 +1,6 @@
-package selenium;
+package base_test;
 
 
-import com.beust.ah.A;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import random_web_pages.GoogleSearchPage;

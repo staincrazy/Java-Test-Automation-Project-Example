@@ -3,7 +3,7 @@ package tests;
 import oktopost_pages.OktopostAppDashboardPage;
 import oktopost_pages.OktopostAppLoginPage;
 import org.testng.annotations.Test;
-import selenium.BaseTest;
+import base_test.BaseTest;
 import workflows.Actions;
 import workflows.Assertions;
 
