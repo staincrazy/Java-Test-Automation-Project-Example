@@ -1,8 +1,6 @@
 package workflows;
 
-import com.beust.ah.A;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class Actions {
 
@@ -15,11 +13,8 @@ public class Actions {
     public void navigate(String url){
         if(url!=null){
             driver.get(url);
-    }
+        }
     }
 
-    public String getPageTitle(){
-        return driver.getTitle();
-    }
 
 }
