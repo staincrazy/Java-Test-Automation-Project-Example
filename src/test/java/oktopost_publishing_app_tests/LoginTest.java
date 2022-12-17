@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
     }
 
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void loginTest(){
 
         actions.navigate(OktopostAppLoginPage.appUrl);
@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 0)
     public void loginTestIncorrectCredentials(){
 
         actions.navigate(OktopostAppLoginPage.appUrl);
