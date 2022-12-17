@@ -19,18 +19,6 @@ public class LoginTest extends BaseTest {
     OktopostAppDashboardPage oktopostAppDashboardPage = new OktopostAppDashboardPage(driver);
 
 
-    @BeforeTest(alwaysRun = true)
-    public void initTest(){
-        if(driver==null){
-            driver= SingletonWebDriver.getSafariDriverInstance();
-        }
-    }
-
-    @AfterTest(alwaysRun = true)
-    public void tearDownTest(){
-        driver.quit();
-
-    }
 
 
     @Test(priority = 1)

@@ -17,7 +17,7 @@ public class OktopostAppDashboardPage {
     }
 
     public boolean assertPageTitleEquals(){
-        for(defaultTimeout=10000; defaultTimeout>0;defaultTimeout-=1){
+        for(defaultTimeout=100000; defaultTimeout>0;defaultTimeout-=1){
             if(driver.getTitle().equals(dashboardPageTitle)){
                 return true;
             }
