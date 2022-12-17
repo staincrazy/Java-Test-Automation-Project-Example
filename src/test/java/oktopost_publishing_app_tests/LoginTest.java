@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import base_test.BaseTest;
 import resources.SingletonWebDriver;
+import utils.GetCredentials;
 import workflows.Actions;
 import workflows.Assertions;
 
@@ -34,9 +35,11 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 1)
     public void loginTest(){
-
+        GetCredentials credentials = new GetCredentials("src/main/java/test_data/default_app_user_credentials");
+        String userLogin = credentials.getProperty("Username");
+        String userPassword = credentials.getProperty("Password");
         actions.navigate(OktopostAppLoginPage.appUrl);
-        oktopostAppLoginPage.loginToOktopostApp("reanold@oktopost.com", "Reanold_123");
+        oktopostAppLoginPage.loginToOktopostApp(userLogin, userPassword);
         assert oktopostAppDashboardPage.assertPageTitleEquals();
 
     }
