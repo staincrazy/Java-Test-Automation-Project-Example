@@ -2,13 +2,15 @@ package oktopost_pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import workflows.Assertions;
 
 
 public class OktopostAppLoginPage {
     public static String appUrl = "https://app.oktopost.com";
 
+    By incorrectCredentialsErrorMessage =
+            By.xpath(".//*[contains(text(),'Please check your email and password')]");
     WebDriver driver;
-
 
     By loginField = By.xpath(".//input[@placeholder='name@company.com']");
     By passwordField = By.xpath(".//input[@placeholder='Password']");
@@ -30,5 +32,12 @@ public class OktopostAppLoginPage {
             System.out.println("Cannot perform action, this exception occurs " + e);
         }
     }
+
+    public boolean isErrorMessageDisplayed(){
+        Assertions assertions = new Assertions(driver);
+        return assertions.isDisplayed(incorrectCredentialsErrorMessage);
+
+    }
+
 
 }

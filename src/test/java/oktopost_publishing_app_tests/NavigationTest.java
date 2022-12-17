@@ -16,23 +16,23 @@ public class NavigationTest extends BaseTest {
     NavigationBar navigationBar = new NavigationBar(driver);
     OktopostAppLoginPage oktopostAppLoginPage = new OktopostAppLoginPage(driver);
 
-    E2EWorkflows authorizationWorkflows = new E2EWorkflows(driver);
+    E2EWorkflows e2EWorkflows = new E2EWorkflows(driver);
 
     @Test
     public void navigateToStreams(){
         actions.navigate(OktopostAppLoginPage.appUrl);
         oktopostAppLoginPage.loginToOktopostApp("reanold@oktopost.com", "Reanold_123");
-        assert assertions.assertPageTitleIs(OktopostAppDashboardPage.dashboardPageTitle);
+        assert assertions.isPageTitle(OktopostAppDashboardPage.dashboardPageTitle);
         navigationBar.getToSection(NavigationBar.streams);
-        assert assertions.assertPageTitleIs("New Tab - Streams | Oktopost");
+        assert assertions.isPageTitle("New Tab - Streams | Oktopost");
     }
 
     @Test
     public void navigateToSettingsSection(){
         actions.navigate(OktopostAppLoginPage.appUrl);
-        authorizationWorkflows.loginToAppWithDefaultUser();
-        assert assertions.assertPageTitleIs(OktopostAppDashboardPage.dashboardPageTitle);
+        e2EWorkflows.loginToAppWithDefaultUser();
+        assert assertions.isPageTitle(OktopostAppDashboardPage.dashboardPageTitle);
         navigationBar.navigateToSettings();
-        assert assertions.assertPageTitleIs("Account - Settings | Oktopost");
+        assert assertions.isPageTitle("Account - Settings | Oktopost");
     }
 }
