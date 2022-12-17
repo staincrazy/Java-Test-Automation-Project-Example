@@ -2,7 +2,9 @@ package base_test;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import resources.SingletonWebDriver;
 
 public class BaseTest {
@@ -15,6 +17,7 @@ public class BaseTest {
             driver = SingletonWebDriver.getChromeDriverInstance();
         }
    }
+
 
     @AfterClass
     public void tearDown(){
