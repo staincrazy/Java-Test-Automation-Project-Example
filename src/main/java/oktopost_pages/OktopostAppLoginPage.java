@@ -2,7 +2,6 @@ package oktopost_pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import workflows.Assertions;
 
 
 public class OktopostAppLoginPage {
@@ -30,11 +29,6 @@ public class OktopostAppLoginPage {
         } catch (Exception e) {
             System.out.println("Cannot perform action, this exception occurs " + e);
         }
-    }
-
-    public String pageTitle() {
-        String title = driver.getTitle();
-        return title;
     }
 
 }

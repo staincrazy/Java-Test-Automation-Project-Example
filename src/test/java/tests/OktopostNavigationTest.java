@@ -1,10 +1,10 @@
 package tests;
 
+import base_test.BaseTest;
 import oktopost_pages.NavigationBar;
 import oktopost_pages.OktopostAppDashboardPage;
 import oktopost_pages.OktopostAppLoginPage;
 import org.testng.annotations.Test;
-import base_test.BaseTest;
 import workflows.Actions;
 import workflows.Assertions;
 
@@ -12,7 +12,6 @@ public class OktopostNavigationTest extends BaseTest {
 
     Actions actions = new Actions(driver);
     Assertions assertions = new Assertions(driver);
-
     NavigationBar navigationBar = new NavigationBar(driver);
     OktopostAppLoginPage oktopostAppLoginPage = new OktopostAppLoginPage(driver);
 

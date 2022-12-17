@@ -19,7 +19,7 @@ public class OktopostLoginTest extends BaseTest {
 
         actions.navigate(OktopostAppLoginPage.appUrl);
         oktopostAppLoginPage.loginToOktopostApp("reanold@oktopost.com", "Reanold_123");
-        assert assertions.assertPageTitleIs(OktopostAppDashboardPage.pageTitle);
+        assert oktopostAppDashboardPage.assertPageTitleEquals();
 
     }
 
