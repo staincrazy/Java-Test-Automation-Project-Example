@@ -1,4 +1,4 @@
-package tests;
+package oktopost_publishing_app_tests;
 
 import oktopost_pages.OktopostAppDashboardPage;
 import oktopost_pages.OktopostAppLoginPage;
@@ -7,7 +7,7 @@ import base_test.BaseTest;
 import workflows.Actions;
 import workflows.Assertions;
 
-public class OktopostLoginTest extends BaseTest {
+public class LoginTest extends BaseTest {
 
     Actions actions = new Actions(driver);
     Assertions assertions = new Assertions(driver);

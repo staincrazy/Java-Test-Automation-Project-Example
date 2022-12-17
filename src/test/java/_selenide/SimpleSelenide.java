@@ -1,4 +1,4 @@
-package selenide;
+package _selenide;
 
 import static com.codeborne.selenide.Selenide.*;
 

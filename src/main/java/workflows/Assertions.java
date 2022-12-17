@@ -17,6 +17,7 @@ public class Assertions {
                 return true;
             }
         }
+        System.out.println(driver.getTitle());
         return false;
     }
 }

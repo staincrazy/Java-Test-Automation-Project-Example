@@ -16,6 +16,9 @@ public class NavigationBar {
     public static By socialBi = By.xpath(".//a[@data-menu='social-bi']");
     public static By peopleDataBase = By.xpath(".//a[@data-menu='pdb']");
 
+    public static By userAvatarIcon = By.xpath(".//button/img[@alt='user avatar']");
+    public static By userMenuSettingsButton = By.xpath(".//a[@href='/setup/account']");
+
     public NavigationBar(WebDriver driver){
         this.driver = driver;
     }
@@ -23,5 +26,13 @@ public class NavigationBar {
     public void getToSection(By sectionName){
         driver.findElement(sectionName).click();
     }
+
+    public void navigateToSettings(){
+        driver.findElement(userAvatarIcon).click();
+        driver.findElement(userMenuSettingsButton).click();
+
+    }
+
+
 
 }

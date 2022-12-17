@@ -6,12 +6,10 @@ public class OktopostAppDashboardPage {
 
     WebDriver driver;
 
-    String dashboardPageTitle = "Dashboard | Oktopost";
-
     int defaultTimeout;
 
 
-    public static String pageTitle = "Dashboard | Oktopost";
+    public static String dashboardPageTitle = "Dashboard | Oktopost";
 
     public OktopostAppDashboardPage(WebDriver driver) {
         this.driver = driver;
