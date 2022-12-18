@@ -1,5 +1,6 @@
 package workflows;
 
+import oktopost_pages.NavigationBar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -31,6 +32,19 @@ public class Assertions {
                driver.findElement(element).isDisplayed();
 
                return true;
+            }catch (Exception e){
+                myException = e.getMessage();
+            }
+        }
+        System.out.println(myException);
+        return false;
+    }
+
+    public boolean isLoggedInApp(){
+        for(defaultTimeout=10000; defaultTimeout>0;defaultTimeout-=1){
+            try {
+                driver.findElement(NavigationBar.userAvatarIcon).isDisplayed();
+                return true;
             }catch (Exception e){
                 myException = e.getMessage();
             }
