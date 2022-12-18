@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import workflows.Assertions;
 
 
-public class OktopostAppLoginPage {
+public class LoginPage {
     public static String appUrl = "https://app.oktopost.com";
 
     WebDriver driver;
@@ -17,7 +17,7 @@ public class OktopostAppLoginPage {
     By submitButton = By.xpath(".//*[contains(text(),'Sign in')]");
 
 
-    public OktopostAppLoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 

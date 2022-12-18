@@ -2,7 +2,7 @@ package oktopost_pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class OktopostAppDashboardPage {
+public class DashboardPage {
 
     WebDriver driver;
 
@@ -11,7 +11,7 @@ public class OktopostAppDashboardPage {
 
     public static String dashboardPageTitle = "Dashboard | Oktopost";
 
-    public OktopostAppDashboardPage(WebDriver driver) {
+    public DashboardPage(WebDriver driver) {
         this.driver = driver;
 
     }

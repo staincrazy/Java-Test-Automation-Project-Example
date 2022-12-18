@@ -2,7 +2,7 @@ package oktopost_publishing_app_tests.e2e_tests;
 
 import base_test.BaseTest;
 import oktopost_pages.NavigationBar;
-import oktopost_pages.OktopostAppLoginPage;
+import oktopost_pages.LoginPage;
 import org.testng.annotations.Test;
 import workflows.Actions;
 import workflows.Assertions;
@@ -19,7 +19,7 @@ public class EndToEndTests extends BaseTest {
     @Test
     public void connectFaceBookProfile(){
 
-        actions.navigate(OktopostAppLoginPage.appUrl);
+        actions.navigate(LoginPage.appUrl);
         e2EWorkflows.loginToAppWithDefaultUser();
         assert assertions.isLoggedInApp();
         navigationBar.getToSection(NavigationBar.userAvatarIcon);
