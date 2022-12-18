@@ -16,6 +16,9 @@ public class NavigationBar {
     public static By socialBi = By.xpath(".//a[@data-menu='social-bi']");
     public static By peopleDataBase = By.xpath(".//a[@data-menu='pdb']");
 
+    public static By settingsSocialProfiles = By.xpath(".//a[@href='/setup/profiles']");
+
+
     public static By userAvatarIcon = By.xpath(".//button/img[@alt='user avatar']");
     public static By userMenuSettingsButton = By.xpath(".//a[@href='/setup/account']");
 
@@ -33,6 +36,12 @@ public class NavigationBar {
 
     }
 
+    public void navigateToSocialProfiles(){
+        driver.findElement(userAvatarIcon).click();
+        driver.findElement(userMenuSettingsButton).click();
+        driver.findElement(settingsSocialProfiles).click();
+
+    }
 
 
 }

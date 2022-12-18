@@ -18,7 +18,7 @@ public class TikTokPage {
         this.driver = driver;
     }
 
-    public void loginToNetwork(String userLogin, String userPassword){
+    public void loginToTikTok(String userLogin, String userPassword){
         driver.findElement(useEmailButtonSelector).click();
         driver.findElement(loginWithEmailButtonSelector).click();
         driver.findElement(emailFieldSelector).sendKeys(userLogin);
