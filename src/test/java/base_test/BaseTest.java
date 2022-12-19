@@ -7,12 +7,12 @@ import resources.SingletonWebDriver;
 
 public class BaseTest {
 
-    public WebDriver driver = SingletonWebDriver.getChromeDriverInstance();
+    public WebDriver driver = SingletonWebDriver.getFireFoxDriverInstance();
 
     @BeforeClass
     public void initDriver(){
         if(driver==null){
-            driver = SingletonWebDriver.getChromeDriverInstance();
+            driver = SingletonWebDriver.getFireFoxDriverInstance();
         }
    }
 

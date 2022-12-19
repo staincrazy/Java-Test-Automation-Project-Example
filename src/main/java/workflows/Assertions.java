@@ -40,7 +40,7 @@ public class Assertions {
         return false;
     }
 
-    public boolean isLoggedInApp(){
+    public boolean isLoggedInToApp(){
         for(defaultTimeout=10000; defaultTimeout>0;defaultTimeout-=1){
             try {
                 driver.findElement(NavigationBar.userAvatarIcon).isDisplayed();

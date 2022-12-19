@@ -10,6 +10,7 @@ public class Actions {
 
     String exceptionText;
 
+    int defaultTimeout;
     WebDriver driver;
 
     public Actions(WebDriver driver){
@@ -34,5 +35,16 @@ public class Actions {
         System.out.println(exceptionText);
     }
 
+    public void clickOnElement(By selector){
+        for(defaultTimeout = 10000; defaultTimeout>0; defaultTimeout-=1){
+            try {
+                driver.findElement(selector).click();
+                break;
+            }catch (Exception e){
+                exceptionText = e.getMessage();
+            }
+        }
+        System.out.println(exceptionText);
+    }
 
 }

@@ -21,7 +21,7 @@ public class EndToEndTests extends BaseTest {
 
         actions.navigate(LoginPage.appUrl);
         e2EWorkflows.loginToAppWithDefaultUser();
-        assert assertions.isLoggedInApp();
+        assert assertions.isLoggedInToApp();
         navigationBar.getToSection(NavigationBar.userAvatarIcon);
         navigationBar.getToSection(NavigationBar.userMenuSettingsButton);
 
