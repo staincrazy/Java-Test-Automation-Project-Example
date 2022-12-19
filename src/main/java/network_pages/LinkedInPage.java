@@ -6,11 +6,9 @@ import org.openqa.selenium.WebDriver;
 public class LinkedInPage {
 
     WebDriver driver;
-
     By loginFieldSelector = By.xpath(".//input[@id='username']");
     By passwordFieldSelector = By.xpath(".//input[@id='password']");
     By signInButtonSelector = By.xpath(".//button[@type='submit']");
-
     By allowConnectionButtonSelector = By.xpath(".//button[text()='Allow']");
 
     public LinkedInPage (WebDriver driver){

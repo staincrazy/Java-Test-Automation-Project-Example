@@ -7,7 +7,7 @@ import workflows.Assertions;
 
 public class LoginPage {
     public static String appUrl = "https://app.oktopost.com";
-
+    Assertions assertions;
     WebDriver driver;
     By incorrectCredentialsErrorMessage =
             By.xpath(".//*[contains(text(),'Please check your email and password')]");
@@ -19,6 +19,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        assertions = new Assertions(driver);
     }
 
 
@@ -34,7 +35,6 @@ public class LoginPage {
     }
 
     public boolean isErrorMessageDisplayed(){
-        Assertions assertions = new Assertions(driver);
         return assertions.isDisplayed(incorrectCredentialsErrorMessage);
 
     }

@@ -6,7 +6,6 @@ import network_pages.TikTokPage;
 import oktopost_pages.LoginPage;
 import oktopost_pages.NavigationBar;
 import oktopost_pages.SocialProfilesPage;
-import org.openqa.selenium.devtools.v107.webauthn.model.Credential;
 import org.testng.annotations.Test;
 import utils.GetCredentials;
 import workflows.Actions;
@@ -19,7 +18,6 @@ public class SocialProfileTests extends BaseTest {
     private NavigationBar navigationBar = new NavigationBar(driver);
     private E2EWorkflows workflows = new E2EWorkflows(driver);
     private TikTokPage tikTokPage = new TikTokPage(driver);
-
     private LinkedInPage linkedInPage = new LinkedInPage(driver);
 
     private GetCredentials credentials;
@@ -56,6 +54,5 @@ public class SocialProfileTests extends BaseTest {
         linkedInPage.loginToLinkedIn(loginLinkedIn, passwordLinkedIn);
 
     }
-
 
 }

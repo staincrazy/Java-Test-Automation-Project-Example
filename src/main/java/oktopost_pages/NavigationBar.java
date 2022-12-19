@@ -27,7 +27,9 @@ public class NavigationBar {
     }
 
     public void getToSection(By sectionName){
+        if(sectionName!=null){
         driver.findElement(sectionName).click();
+        }
     }
 
     public void navigateToSettings(){

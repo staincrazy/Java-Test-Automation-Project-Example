@@ -11,7 +11,6 @@ import workflows.E2EWorkflows;
 public class EndToEndTests extends BaseTest {
 
     Actions actions = new Actions(driver);
-
     Assertions assertions = new Assertions(driver);
     E2EWorkflows e2EWorkflows = new E2EWorkflows(driver);
     NavigationBar navigationBar = new NavigationBar(driver);
