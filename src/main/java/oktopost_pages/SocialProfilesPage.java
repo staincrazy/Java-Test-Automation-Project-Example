@@ -10,7 +10,7 @@ public class SocialProfilesPage {
     WebDriver driver;
 
     By connectFirstProfileButtonSelector = By.xpath(".//*[contains(text(),'Connect your first profile')]");
-    By connectProfileButtonSelector = By.xpath(".//*[contains(text(),'Connect a Profile')]");
+    By connectProfileButtonSelector = By.cssSelector("button[class='lobster-button']");
     By tiktokNetworkButtonSelector = By.xpath(".//*[contains(text(),'TikTok Business')]");
     By linkedInProfileButtonSelector = By.xpath(".//*[contains(text(),'LinkedIn Profile')]");
 

@@ -26,7 +26,8 @@ public class Actions {
     public void clickOnFirstAvailableElement(By @NotNull ...elements){
         for(By element: elements){
             try{
-                driver.findElement(element).click();
+                clickOnElement(element);
+                //driver.findElement(element).click();
                 break;
             }catch (Exception e){
                 exceptionText = e.getMessage();
