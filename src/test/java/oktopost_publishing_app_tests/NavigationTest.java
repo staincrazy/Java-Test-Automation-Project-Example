@@ -15,7 +15,6 @@ public class NavigationTest extends BaseTest {
     Assertions assertions = new Assertions(driver);
     NavigationBar navigationBar = new NavigationBar(driver);
     LoginPage oktopostAppLoginPage = new LoginPage(driver);
-
     E2EWorkflows e2EWorkflows = new E2EWorkflows(driver);
 
     @Test

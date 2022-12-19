@@ -52,6 +52,7 @@ public class SocialProfileTests extends BaseTest {
         navigationBar.navigateToSocialProfiles();
         socialProfilesPage.connectNewLinkedInProfile();
         linkedInPage.loginToLinkedIn(loginLinkedIn, passwordLinkedIn);
+        socialProfilesPage.editProfileSettings();
 
     }
 

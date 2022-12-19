@@ -47,4 +47,17 @@ public class Actions {
         System.out.println(exceptionText);
     }
 
+    public void inputTextInField(By selector, String inputText){
+        for(defaultTimeout = 10000; defaultTimeout>0; defaultTimeout-=1){
+            try{
+                driver.findElement(selector).clear();
+                driver.findElement(selector).sendKeys(inputText);
+                break;
+            }catch (Exception e){
+                exceptionText = e.getMessage();
+            }
+
+        }
+    }
+
 }
