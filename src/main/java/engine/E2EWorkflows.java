@@ -1,9 +1,9 @@
-package workflows;
+package engine;
 
-import oktopost_pages.NavigationBar;
-import oktopost_pages.LoginPage;
+import pages.oktopost_pages.NavigationBar;
+import pages.oktopost_pages.LoginPage;
 import org.openqa.selenium.WebDriver;
-import utils.GetCredentials;
+import helpers.GetCredentials;
 
 public class E2EWorkflows {
 

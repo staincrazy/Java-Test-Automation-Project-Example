@@ -1,6 +1,6 @@
-package workflows;
+package engine;
 
-import oktopost_pages.NavigationBar;
+import pages.oktopost_pages.NavigationBar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

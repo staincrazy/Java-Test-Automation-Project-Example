@@ -1,24 +1,21 @@
 package base_test;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import resources.SingletonWebDriver;
+import resources.drivers.WebDriverSingleton;
 
 public class BaseTest {
 
-    public WebDriver driver = SingletonWebDriver.getFireFoxDriverInstance();
+    protected WebDriver webDriver;
 
-    @BeforeClass
-    public void initDriver(){
-        if(driver==null){
-            driver = SingletonWebDriver.getFireFoxDriverInstance();
-        }
-   }
+    public void initFirefoxDriver() {
+        webDriver = WebDriverSingleton.getFireFoxDriverInstance();
+    }
 
+    public void initChromeDriver() throws Exception {
+        this.webDriver = WebDriverSingleton.getChromeDriverInstance();
+    }
 
-    @AfterClass
-    public void tearDown(){
-        driver.quit();
+    public void tearDown() {
+        webDriver.quit();
     }
 }

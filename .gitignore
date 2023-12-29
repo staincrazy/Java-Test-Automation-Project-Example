@@ -1,7 +1,7 @@
 # Skip Python Dirs
 __pycache__/
-/src/main/java/test_data
 .idea
+target
 
 
 # IDE Folders
