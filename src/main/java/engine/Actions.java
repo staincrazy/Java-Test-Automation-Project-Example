@@ -6,40 +6,52 @@ import org.openqa.selenium.WebDriver;
 
 public class Actions {
 
-    String exceptionText;
-
-    int defaultTimeout;
-    WebDriver driver;
+    String      exceptionText;
+    int         defaultTimeout;
+    WebDriver   driver;
 
     public Actions(WebDriver driver){
         this.driver = driver;
     }
 
-    public void navigate(String url){
-        if(url!=null){
+    public void navigate(String url)
+    {
+        if (url != null)
+        {
             driver.get(url);
         }
     }
 
-    public void clickOnFirstAvailableElement(By @NotNull ...elements){
-        for(By element: elements){
+    public void clickOnFirstAvailableElement(By @NotNull ...elements)
+    {
+        String defaultMessage = "Nothing found";
+
+        for (By element: elements){
             try{
                 clickOnElement(element);
-                //driver.findElement(element).click();
                 break;
-            }catch (Exception e){
-                exceptionText = e.getMessage();
+            }catch (Exception e)
+            {
+                if (!e.getMessage().isEmpty())
+                {
+                    exceptionText = e.getMessage();
+                }
+                else {
+                    exceptionText = defaultMessage;
+                }
+
             }
         }
+
         System.out.println(exceptionText);
     }
 
     public void clickOnElement(By selector){
-        for(defaultTimeout = 10000; defaultTimeout>0; defaultTimeout-=1){
+        for (defaultTimeout = 10000; defaultTimeout>0; defaultTimeout-=1){
             try {
                 driver.findElement(selector).click();
                 break;
-            }catch (Exception e){
+            } catch (Exception e){
                 exceptionText = e.getMessage();
             }
         }
@@ -55,7 +67,6 @@ public class Actions {
             }catch (Exception e){
                 exceptionText = e.getMessage();
             }
-
         }
     }
 
