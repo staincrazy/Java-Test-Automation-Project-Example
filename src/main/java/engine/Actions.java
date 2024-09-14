@@ -59,7 +59,7 @@ public class Actions {
     }
 
     public void inputTextInField(By selector, String inputText){
-        for(defaultTimeout = 10000; defaultTimeout>0; defaultTimeout-=1){
+        for(defaultTimeout = 10000; defaultTimeout > 0; defaultTimeout -= 1){
             try{
                 driver.findElement(selector).clear();
                 driver.findElement(selector).sendKeys(inputText);
