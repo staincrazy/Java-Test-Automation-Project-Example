@@ -17,7 +17,18 @@ public class ClickActions extends AbstractBrowserActions
 
     public void clickOnFirstElement(By...elements)
     {
-
+        for (By element: elements)
+        {
+            try
+            {
+                this.webDriver().findElement(element).click();
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
 }
