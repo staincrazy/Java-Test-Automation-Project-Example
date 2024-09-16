@@ -1,7 +1,5 @@
 package engine.actions;
 
-import org.openqa.selenium.By;
-
 public class NavigateActions extends AbstractBrowserActions
 {
 

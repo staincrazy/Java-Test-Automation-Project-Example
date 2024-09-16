@@ -6,8 +6,6 @@ import resources.drivers.WebDriverSingleton;
 
 public abstract class AbstractBrowserActions
 {
-    private WebDriver driver;
-
     public WebDriver webDriver()
     {
         return WebDriverSingleton.getFireFoxDriverInstance();

@@ -1,21 +1,22 @@
 package engine.actions;
 
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 
 public class ClickActions extends AbstractBrowserActions
 {
 
-    public void performSingleClick(By element)
+    public void click(By element)
     {
         this.webDriver().findElement(element).click();
     }
 
-    public void performMultipleClicks(By...elements)
+    public void multipleClicks(By...elements)
     {
-
+        throw new UnsupportedOperationException("Not implemented yet");
     }
 
-    public void clickOnFirstElement(By...elements)
+    public void clickOnFirstElement(By @NotNull ...elements)
     {
         for (By element: elements)
         {
